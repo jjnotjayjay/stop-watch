@@ -3,9 +3,12 @@ $start.addEventListener('click', function() {
   setInterval(addSecond, 1000)
 })
 
+var timerState = {
+  elapsedSeconds: 0
+}
+
 function addSecond() {
   var $elapsed = document.getElementById('elapsed')
-  var elapsedSeconds = parseInt($elapsed.textContent, 10)
-  elapsedSeconds++
-  $elapsed.textContent = elapsedSeconds
+  timerState.elapsedSeconds++
+  $elapsed.textContent = timerState.elapsedSeconds
 }
