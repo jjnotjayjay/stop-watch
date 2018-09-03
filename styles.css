@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(cloud-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Indie Flower', sans-serif;
+}
+
+h1 {
+  margin: 14% 0 0% 39%;
+  font-size: 3.5vw;
+  color: #333;
+}
+
+h3 {
+  margin-left: 45%;
+  font-size: 8vw;
+  line-height: 6vw;
+}
+
+#start {
+  margin: 0.5% 0 0 43%;
+  padding: 0.5vw 1vw;
+  font-size: 1vw;
+  border-radius: 0.5vw;
+  color: #333;
+}
