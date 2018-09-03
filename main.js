@@ -1,6 +1,7 @@
 var $start = document.getElementById('start')
 var $reset = document.getElementById('reset')
 var $elapsed = document.getElementById('elapsed')
+var $limit = document.getElementById('limit')
 
 $start.addEventListener('click', function () {
   if (!timerState.isRunning) {
@@ -31,18 +32,22 @@ $reset.addEventListener('click', function () {
   $reset.classList.add('hidden')
 })
 
+$limit.addEventListener('input', function (e) {
+  timerState.limit = e.target.valueAsNumber
+})
+
 var timerState = {
   elapsedSeconds: 0,
   isRunning: false,
-  intervalID: null
+  intervalID: null,
+  limit: null
 }
 
 function addSecond() {
   timerState.elapsedSeconds++
   $elapsed.textContent = timerState.elapsedSeconds
 
-  var $limit = document.getElementById('limit')
-  if (timerState.elapsedSeconds === parseInt($limit.value, 10)) {
+  if (timerState.elapsedSeconds === timerState.limit) {
     clearInterval(timerState.intervalID)
     timerState.isRunning = false
     $elapsed.classList.add('expired')
