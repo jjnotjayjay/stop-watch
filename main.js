@@ -1,6 +1,7 @@
 var $start = document.getElementById('start')
+var $reset = document.getElementById('reset')
+
 $start.addEventListener('click', function () {
-  var $reset = document.getElementById('reset')
   if (!timerState.isRunning) {
     if (!timerState.elapsedSeconds) {
       $reset.classList.remove('hidden')
@@ -14,6 +15,10 @@ $start.addEventListener('click', function () {
   }
   timerState.isRunning = !timerState.isRunning
   $start.classList.toggle('paused')
+})
+
+$reset.addEventListener('click', function () {
+  clearInterval(timerState.intervalID)
 })
 
 var timerState = {
