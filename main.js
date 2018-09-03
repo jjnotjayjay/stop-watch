@@ -4,7 +4,8 @@ $start.addEventListener('click', function() {
 })
 
 var timerState = {
-  elapsedSeconds: 0
+  elapsedSeconds: 0,
+  isRunning: false
 }
 
 function addSecond() {
