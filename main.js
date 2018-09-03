@@ -2,9 +2,11 @@ var $start = document.getElementById('start')
 $start.addEventListener('click', function () {
   if (!timerState.isRunning) {
     timerState.intervalID = setInterval(addSecond, 1000)
+    $start.textContent = 'Stop Timing'
   }
   else {
     clearInterval(timerState.intervalID)
+    $start.textContent = 'Start Timing'
   }
   timerState.isRunning = !timerState.isRunning
 })
