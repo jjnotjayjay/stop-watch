@@ -1,5 +1,6 @@
 var $start = document.getElementById('start')
 var $reset = document.getElementById('reset')
+var $elapsed = document.getElementById('elapsed')
 
 $start.addEventListener('click', function () {
   if (!timerState.isRunning) {
@@ -19,6 +20,13 @@ $start.addEventListener('click', function () {
 
 $reset.addEventListener('click', function () {
   clearInterval(timerState.intervalID)
+
+  timerState.elapsedSeconds = 0
+  $elapsed.textContent = timerState.elapsedSeconds
+  timerState.isRunning = false
+
+  $start.classList.remove('paused')
+  $start.textContent = 'Start Timing'
 })
 
 var timerState = {
@@ -28,7 +36,6 @@ var timerState = {
 }
 
 function addSecond() {
-  var $elapsed = document.getElementById('elapsed')
   timerState.elapsedSeconds++
   $elapsed.textContent = timerState.elapsedSeconds
 }
