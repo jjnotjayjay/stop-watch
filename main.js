@@ -1,6 +1,6 @@
 var $start = document.getElementById('start')
 $start.addEventListener('click', function() {
-
+  var startWatch = setInterval(addSecond, 1000)
 })
 
 function addSecond() {
