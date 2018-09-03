@@ -8,12 +8,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Indie Flower', sans-serif;
+  color: #333;
 }
 
 h1 {
   margin: 14% 0 0% 39%;
   font-size: 3.5vw;
-  color: #333;
 }
 
 h3 {
@@ -27,5 +27,9 @@ h3 {
   padding: 0.5vw 1vw;
   font-size: 1vw;
   border-radius: 0.5vw;
-  color: #333;
+}
+
+.paused {
+  background: black;
+  color: white;
 }

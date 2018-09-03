@@ -1,0 +1,32 @@
+{
+  "name": "stop-watch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjnotjayjay/stop-watch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjnotjayjay/stop-watch/issues"
+  },
+  "homepage": "https://github.com/jjnotjayjay/stop-watch#readme",
+  "dependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "htmlhint": "^0.10.0",
+    "lint-staged": "^7.2.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}
