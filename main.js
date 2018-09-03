@@ -25,6 +25,7 @@ $reset.addEventListener('click', function () {
   $elapsed.textContent = timerState.elapsedSeconds
   timerState.isRunning = false
 
+  $elapsed.classList.remove('expired')
   $start.classList.remove('paused')
   $start.textContent = 'Start Timing'
   $reset.classList.add('hidden')
@@ -44,5 +45,6 @@ function addSecond() {
   if (timerState.elapsedSeconds === parseInt($limit.value, 10)) {
     clearInterval(timerState.intervalID)
     timerState.isRunning = false
+    $elapsed.classList.add('expired')
   }
 }

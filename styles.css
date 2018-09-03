@@ -55,3 +55,7 @@ span {
 .hidden {
   display: none;
 }
+
+.expired {
+  color: red;
+}
