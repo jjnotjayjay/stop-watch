@@ -9,6 +9,7 @@ $start.addEventListener('click', function () {
     $start.textContent = 'Start Timing'
   }
   timerState.isRunning = !timerState.isRunning
+  $start.classList.toggle('paused')
 })
 
 var timerState = {
