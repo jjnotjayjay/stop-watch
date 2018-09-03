@@ -39,4 +39,10 @@ var timerState = {
 function addSecond() {
   timerState.elapsedSeconds++
   $elapsed.textContent = timerState.elapsedSeconds
+
+  var $limit = document.getElementById('limit')
+  if (timerState.elapsedSeconds === parseInt($limit.value, 10)) {
+    clearInterval(timerState.intervalID)
+    timerState.isRunning = false
+  }
 }
