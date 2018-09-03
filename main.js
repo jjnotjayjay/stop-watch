@@ -1,6 +1,10 @@
 var $start = document.getElementById('start')
 $start.addEventListener('click', function () {
+  var $reset = document.getElementById('reset')
   if (!timerState.isRunning) {
+    if (!timerState.elapsedSeconds) {
+      $reset.classList.remove('hidden')
+    }
     timerState.intervalID = setInterval(addSecond, 1000)
     $start.textContent = 'Stop Timing'
   }
