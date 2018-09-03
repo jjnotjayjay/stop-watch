@@ -27,6 +27,7 @@ $reset.addEventListener('click', function () {
 
   $start.classList.remove('paused')
   $start.textContent = 'Start Timing'
+  $reset.classList.add('hidden')
 })
 
 var timerState = {
