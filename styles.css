@@ -2,3 +2,15 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: url(cloud-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin: 14% 0 10% 40%;
+  font-size: 3vw;
+  color: #333;
+}
