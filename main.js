@@ -1,6 +1,9 @@
 var $start = document.getElementById('start')
-$start.addEventListener('click', function() {
-  setInterval(addSecond, 1000)
+$start.addEventListener('click', function () {
+  if (!timerState.isRunning) {
+    setInterval(addSecond, 1000)
+  }
+  timerState.isRunning = !timerState.isRunning
 })
 
 var timerState = {
